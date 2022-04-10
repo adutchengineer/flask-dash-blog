@@ -72,6 +72,10 @@ def register_routes(app):
         path = '{}/{}'.format(POST_DIR, name)
         post = pages.get_or_404(path)
         return render_template('post.html', post=post)
+    
+    @app.route('/<title_for_redirect>')
+    def project_jupyter_notebook():
+        return redirect('https://mybinder.org/<your_binder_url>')
 
     @freezer.register_generator
     def pagelist():
