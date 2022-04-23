@@ -1,4 +1,5 @@
 import os
+
 """Plotly Dash HTML layout override."""
 dir_path = os.getcwd()
 with open(os.path.join(dir_path, 'main', 'templates', 'base.html'), 'r') as f:
